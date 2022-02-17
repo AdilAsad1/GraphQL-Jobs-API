@@ -21,7 +21,6 @@ const errorLink = onError(({ graphqlErrors }) => {
 });
 
 
-
 const link = from([
   errorLink,
   new HttpLink({ uri: "https://api.graphql.jobs/" }),
