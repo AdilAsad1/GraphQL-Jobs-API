@@ -22,5 +22,4 @@ function GetJobs() {
 
     );
   }
-  
   export default GetJobs;

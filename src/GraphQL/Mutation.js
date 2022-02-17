@@ -1,6 +1,5 @@
 import { gql} from '@apollo/client';
 
-
 export const CREATE_JOB_MUTATION = gql`
   mutation postJob(input:{
     $title: String!
