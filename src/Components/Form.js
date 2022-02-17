@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {CREATE_JOB_MUTATION}  from "../GraphQL/Mutation";
 import {useMutation} from "@apollo/client";
+import "./Form.css";
 
 function Form() {
   const [title, setTitle] = useState("");
@@ -32,14 +33,20 @@ function Form() {
     }
   };
   return (
-    <div>
+    <div className="basic-form">
+      <div>
+      <label>Job Title: </label>
       <input
         type="text"
-        placeholder="Title"
+        placeholder="e.g. Web Developer"
         onChange={(e) => {
           setTitle(e.target.value);
         }}
       />
+      </div>
+      <br></br>
+      <div>
+      <label>Comitment ID: </label>
       <input
         type="comitmentID"
         placeholder="Comitment ID"
@@ -47,43 +54,64 @@ function Form() {
           setComitmentID(e.target.value);
         }}
       />
+      </div>
+      <br></br>
+      <div>
+      <label>Company Name: </label>
       <input
         type="companyName"
-        placeholder="Company Name"
+        placeholder="e.g. Trimulabs"
         onChange={(e) => {
           setCompanyName(e.target.value);
         }}
       />
+      </div>
+      <br></br>
+      <div>
+      <label>Location: </label>
       <input
         type="text"
-        placeholder="Location"
+        placeholder="e.g. Lahore"
         onChange={(e) => {
           setLocationNames(e.target.value);
         }}
       />
+      </div>
+      <br></br>
+      <div>
+      <label>Email: </label>
       <input
         type="text"
-        placeholder="User Email"
+        placeholder="example@gmail.com"
         onChange={(e) => {
           setUserEmail(e.target.value);
         }}
-      />    
+      />
+      </div>
+      <br></br>
+      <div>
+      <label>Job Description: </label>    
       <input
         type="text"
-        placeholder="description"
+        placeholder="Description"
         onChange={(e) => {
           setDescription(e.target.value);
         }}
       />
+      </div>
+      <br></br>
+      <div>
+      <label>Apply URL: </label>
       <input
         type="text"
-        placeholder="applyURL"
+        placeholder="example.com"
         onChange={(e) => {
           setApplyURL(e.target.value);
         }}
       />
-      
-      
+      </div>
+      <br></br>
+
       <button onClick={addJob}> Create Job</button>
     </div>
   );
