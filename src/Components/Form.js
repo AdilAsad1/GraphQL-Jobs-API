@@ -110,9 +110,10 @@ function Form() {
         }}
       />
       </div>
-      <br></br>
-
+      
+      <div className="button">  
       <button onClick={addJob}> Create Job</button>
+      </div>
     </div>
   );
 }

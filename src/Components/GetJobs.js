@@ -1,23 +1,25 @@
 import React, {useEffect, useState} from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql, useSubscription } from "@apollo/client";
 import { LOAD_JOBS } from "../GraphQL/Queries";
 
 function GetJobs() {
-    const { error, loading, data } = useQuery(LOAD_JOBS);
+    const {data} = useQuery(LOAD_JOBS);
     const [jobs, setJobs] = useState([]);
+
     useEffect(() => {
       if (data) {
-        setJobs(data.getAllJobs);
+        //console.log(data)
+        setJobs(data.jobs);
       }
     }, [data]);
   
     return (
       <div>
-        {/* {" "}
-        {jobs.map((val) => {
-          return <h1> {val.title}</h1>;
-        })} */}
+      {/*jobs.map((val) => {
+        return <h1>{val.title}</h1>;
+      })*/}
       </div>
+
     );
   }
   

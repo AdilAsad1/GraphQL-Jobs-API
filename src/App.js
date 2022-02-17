@@ -35,7 +35,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {" "}
-      { <GetJobs /> }
+      <GetJobs />
       <Form />
     </ApolloProvider>
   )

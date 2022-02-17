@@ -5,3 +5,13 @@
     background-color: lightblue;
     text-align: center;
 }
+.button {
+    
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
