@@ -6,7 +6,7 @@ GraphQL
 
 API: https://api.graphql.jobs/
 
-To run:
-clone
-npm install
-npm start
+To run:/n
+clone /n
+npm install/n
+npm start/n
